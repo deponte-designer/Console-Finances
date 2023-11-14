@@ -170,14 +170,15 @@ for (var i = 0; i < finances.length; i++) {
     profit = [date, change];
   }
 
+  // *6 The greatest decrease in Profit/Losses (date and amount) over the entire period.
+  if (change < losses[1]) {
+    losses = [date, change];
+  }
+
 }
 
 console.log('Total: $' + TotalAmount);
 console.log('Average Change: ' + averageChanges);
 console.log(profit);
+console.log(losses);
 
-
-
-
-
-// !6 The greatest decrease in Profit/Losses (date and amount) over the entire period.
