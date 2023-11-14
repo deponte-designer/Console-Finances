@@ -128,6 +128,13 @@ var TotalNumMonths = 0;
 
 // *2 The net total amount of Profit/Losses over the entire period.
 var TotalAmount = 0;
+var months = [];
+var profit = ['', 0];
+var losses = ['', 999999999];
+var currentMonth;
+var date;
+var amount;
+
 
 console.log('Financial Analysis');
 console.log('----------------');
@@ -137,11 +144,13 @@ TotalNumMonths = finances.length;
 console.log('Total Months: ', TotalNumMonths);
 
 
-for (let index = 0; index < array.length; index++) {
-  const element = array[index];
-  
+for (var i = 0; i < finances.length; i++) { 
+  // *2 The net total amount of Profit/Losses over the entire period.
+  currentMonth = finances[i]; 
+  date = currentMonth[0]; 
+  amount = currentMonth[1]; 
+  TotalAmount += amount; 
 }
 
-
-
 console.log('Total: $' + TotalAmount);
+
