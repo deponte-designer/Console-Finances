@@ -96,18 +96,18 @@ var finances = [
 // * You have been given a dataset composed of arrays with two fields, Date and Profit/Losses.
 // Your task is to write JavaScript code that analyzes the records to calculate each of the following:
 
-// * The total number of months included in the dataset.
+// *1 The total number of months included in the dataset.
 
-// ! The net total amount of Profit/Losses over the entire period.
+// *2 The net total amount of Profit/Losses over the entire period.
 
-// ! The average of the changes in Profit/Losses over the entire period.
+// *3 The average of the changes in Profit/Losses over the entire period.
 
-// ! You will need to track what the total change in Profit/Losses are from month to month and then find the average.
+// *4 You will need to track what the total change in Profit/Losses are from month to month and then find the average.
 // (Total/(Number of months - 1))
 
-// ! The greatest increase in Profit/Losses (date and amount) over the entire period.
+// !5 The greatest increase in Profit/Losses (date and amount) over the entire period.
 
-// ! The greatest decrease in Profit/Losses (date and amount) over the entire period.
+// !6 The greatest decrease in Profit/Losses (date and amount) over the entire period.
 
 // ! When you open your code in the browser your resulting analysis should look similar to the following:
 
@@ -135,6 +135,12 @@ var currentMonth;
 var date;
 var amount;
 
+// *3 The average of the changes in Profit/Losses over the entire period.
+var averageChanges = 0;
+var change = 0;
+var lastAmount = 0;
+var netChangeSum = 0;
+
 
 console.log('Financial Analysis');
 console.log('----------------');
@@ -150,7 +156,23 @@ for (var i = 0; i < finances.length; i++) {
   date = currentMonth[0]; 
   amount = currentMonth[1]; 
   TotalAmount += amount; 
+  
+  // *3 The average of the changes in Profit/Losses over the entire period.
+  if (i > 0) change = amount - lastAmount;
+  lastAmount = amount;
+  netChangeSum += change;
+
+  averageChanges = Math.round((netChangeSum / (finances.length - 1)) * 100) / 100;
 }
 
 console.log('Total: $' + TotalAmount);
+console.log('Average Change: ' + averageChanges);
 
+
+
+// !4 You will need to track what the total change in Profit/Losses are from month to month and then find the average.
+// (Total/(Number of months - 1))
+
+// !5 The greatest increase in Profit/Losses (date and amount) over the entire period.
+
+// !6 The greatest decrease in Profit/Losses (date and amount) over the entire period.
