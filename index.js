@@ -119,7 +119,18 @@ var finances = [
 // Greatest Increase in Profits/Losses: Feb-2012 ($1926159)
 // Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
 
+// -------------------------------------------------------------------------
+// -------------------------------------------------------------------------
+
+
+// *1 The total number of months included in the dataset.
+var TotalNumMonths = 0;
+
+
 
 
 console.log('Financial Analysis');
 console.log('----------------');
+
+TotalNumMonths = finances.length;
+console.log('Total Months: ', TotalNumMonths);
