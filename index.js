@@ -105,7 +105,7 @@ var finances = [
 // *4 You will need to track what the total change in Profit/Losses are from month to month and then find the average.
 // (Total/(Number of months - 1))
 
-// !5 The greatest increase in Profit/Losses (date and amount) over the entire period.
+// *5 The greatest increase in Profit/Losses (date and amount) over the entire period.
 
 // !6 The greatest decrease in Profit/Losses (date and amount) over the entire period.
 
@@ -150,29 +150,34 @@ TotalNumMonths = finances.length;
 console.log('Total Months: ', TotalNumMonths);
 
 
-for (var i = 0; i < finances.length; i++) { 
+for (var i = 0; i < finances.length; i++) {
   // *2 The net total amount of Profit/Losses over the entire period.
-  currentMonth = finances[i]; 
-  date = currentMonth[0]; 
-  amount = currentMonth[1]; 
-  TotalAmount += amount; 
-  
+  currentMonth = finances[i];
+  date = currentMonth[0];
+  amount = currentMonth[1];
+  TotalAmount += amount;
+
   // *3 The average of the changes in Profit/Losses over the entire period.
   if (i > 0) change = amount - lastAmount;
   lastAmount = amount;
   netChangeSum += change;
 
+  // *4 You will need to track what the total change in Profit/Losses are from month to month and then find the average.
   averageChanges = Math.round((netChangeSum / (finances.length - 1)) * 100) / 100;
+
+  // *5 The greatest increase in Profit/Losses (date and amount) over the entire period.
+  if (change > profit[1]) {
+    profit = [date, change];
+  }
+
 }
 
 console.log('Total: $' + TotalAmount);
 console.log('Average Change: ' + averageChanges);
+console.log(profit);
 
 
 
-// !4 You will need to track what the total change in Profit/Losses are from month to month and then find the average.
-// (Total/(Number of months - 1))
 
-// !5 The greatest increase in Profit/Losses (date and amount) over the entire period.
 
 // !6 The greatest decrease in Profit/Losses (date and amount) over the entire period.
