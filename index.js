@@ -96,7 +96,7 @@ var finances = [
 // * You have been given a dataset composed of arrays with two fields, Date and Profit/Losses.
 // Your task is to write JavaScript code that analyzes the records to calculate each of the following:
 
-// ! The total number of months included in the dataset.
+// * The total number of months included in the dataset.
 
 // ! The net total amount of Profit/Losses over the entire period.
 
@@ -126,11 +126,22 @@ var finances = [
 // *1 The total number of months included in the dataset.
 var TotalNumMonths = 0;
 
-
-
+// *2 The net total amount of Profit/Losses over the entire period.
+var TotalAmount = 0;
 
 console.log('Financial Analysis');
 console.log('----------------');
 
+// *1 The total number of months included in the dataset.
 TotalNumMonths = finances.length;
 console.log('Total Months: ', TotalNumMonths);
+
+
+for (let index = 0; index < array.length; index++) {
+  const element = array[index];
+  
+}
+
+
+
+console.log('Total: $' + TotalAmount);
