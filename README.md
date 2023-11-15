@@ -2,6 +2,7 @@
 
 
 ## Overview
+
 This repository is the result of the Unit 4 Challenge: Console Finances. In this activity, I used my JavaScript skills to create code for analyzing the financial records of a company. The provided starter/index.js file contains the financial dataset that I worked with.
 
 
@@ -9,16 +10,19 @@ This repository is the result of the Unit 4 Challenge: Console Finances. In this
 
 
 ### Cloning the Repository
+
 1. Initiated the process by creating a new GitHub repository named Console-Finances.
 2. Cloned the repository to the local machine.
 3. Integrated the starter files into the local git repository.
 
 
 ### Dataset Information
+
 - The financial dataset is structured with arrays containing two fields: Date and Profit/Losses.
 
 
 ### Tasks Completed
+
 Successfully executed the following tasks using JavaScript:
 
 - Calculated the total number of months in the dataset.
@@ -29,6 +33,7 @@ Successfully executed the following tasks using JavaScript:
 
 
 ### Console Output
+
 Upon running the code, the console output mirrors the following example:
 
 ```plaintext
@@ -48,12 +53,6 @@ Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
 *The image above provides a snapshot of the console output.*
 
 > **note:** To view the detailed output, right-click, select Inspect, and click on the Console tab in your browser. 
-
-
-## Hints
-* I did some research on my own to tackle the challenges in this project.
-* I used string concatenation to combine strings and variables in the console.
-* I figured out how to format numbers to the nearest hundredth in JavaScript.
 
 
 ## Deployment
