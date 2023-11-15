@@ -156,8 +156,8 @@ for (var i = 0; i < finances.length; i++) {
 
 }
 
-console.log('Total: $' + TotalAmount);
-console.log('Average Change: ' + averageChanges);
-console.log(profit);
-console.log(losses);
+console.log("Total: $" + TotalAmount);
+console.log("Average Change: " + averageChanges);
+console.log("Greatest Increase in Profits/Losses: " + profit);
+console.log("Greatest Decrease in Profits/Losses: " + losses);
 
